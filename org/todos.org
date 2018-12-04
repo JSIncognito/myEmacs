@@ -1,22 +1,39 @@
 * Inbox(수집함)
-** TODO 사용자 화면 소수점 입력 확인
-** TODO 배포 절차 익히기
-*** War 파일 배포
-*** FTP 서버 셋팅 등등..
-** TODO 작업자 화면 Style CSS 파일로 변경
-** TODO 도커 Docker 참조 자료 확인
-** TODO 세종소재 실적등록 양품 / OVER / LOSS 변경
+** TODO 현진 요구사항 리포트
+*** 오즈리포트, 아이리포트 상무님이 메일로 전달 
+*** 출하 - 거래명세서
+*** 발주 - 발주서
+**** 발주자가 바로 내는 발주
+**** 시스템에서 넘어오는 발주
+
 
 * Project List
 ** TODO View 하나로 합쳐져 있는 jsp 나누기
 *** bom -> 등록 -> 품목정보 팝업 이후 bom 에서 등록을 누를 경우 서버 에러 발생
     msg: org.springframework.http.converter.HttpMessageNotReadableException: Required request body content is missing: method 'getBom' parameter 0
     - Spring JSON 행방 불명... 다른 형태로 ajax 사용해서 해볼것... 
+
 * Some time ago Maybe List(언제가/어쩌면 리스트)
 
 * Later Verify Lisy (추후 확인)
+** 배포 절차 익히기
+*** War 파일 배포
+*** FTP 서버 셋팅 등등..
+** 작업자 화면 Style CSS 파일로 변경
+** 도커 Docker 참조 자료 확인
+
 
 * To Do List-Next Action List(다음행동 리스트)
+** TODO 작업 지시 수정.
+*** 공통으로 적용해야할 수정 사항 적용
+
+** TODO 화면설계 작업자 화면
+*** 재고 이동, 불출 관련 화면 (이동, 자재불출)
+*** 재고현황을 볼 수 있도록 하거나 기존 화면 활용 할 수 있도록 설계 할것.
+*** 리스트에서 선택 -> 이동 버튼 (선택 사항만 있는 화면)
+*** 실적등록 2 참고
+*** 화면설계 우선 작성 하고 확정되면 프로그램 개발 진행
+
 
 * Waiting List(대기중 리스트)
 ** BOM view 나누기
@@ -24,8 +41,23 @@
    - bom-popup
    - bom-rgsn-popup
    - bom
+
 * Done List(완료 리스트)
 ** DONE Bom 품목정보 목록 팝업 수정 
    CLOSED: [2018-11-27 화 10:12]
 ** DONE 작업자 화면
    CLOSED: [2018-11-26 월 19:59]
+** DONE 세종소재 실적등록 양품 / OVER / LOSS 변경
+   - State "DONE"
+   <2018-12-03 화>
+   DEADLINE: <2018-12-03 화>
+
+*** 실적구분 코드 LOSS 추가
+    - '10' 양품, '20' OVER(불량), '30' LOSS
+    - LOSS 버튼 추가
+    - 작업지시 화면 LOSS 부분 추가할것.
+    - 쿼리수정 적용.
+    - 테스트 진행 
+** DONE 사용자 화면 소수점 입력 확인
+   CLOSED: [2018-12-04 ȭ 09:32]
+   - State "DONE"       [2018-12-04 ȭ 09:32]
