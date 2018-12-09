@@ -1,10 +1,13 @@
 * Inbox(수집함)
+** 작업자화면 실적등록 추가 설계기반 화면 개발
+*** 작업지시 리스트 화면 -> 공정이동 / 상품 재고 등록
 
 * Project List
 ** TODO 현진 신규소스생성, 기준정보 자료 분석, 기준정보 자료 넣기
 *** 현진 신규소스 Github 업로드
 *** 미팅때 요청한 기준정보 자료 분석
 *** DB Table 데이터 넣기 
+
 * Some time ago Maybe List(언제가/어쩌면 리스트)
 
 * Later Verify Lisy (추후 확인)
@@ -19,7 +22,25 @@
     msg: org.springframework.http.converter.HttpMessageNotReadableException: Required request body content is missing: method 'getBom' parameter 0
     - Spring JSON 행방 불명... 다른 형태로 ajax 사용해서 해볼것... 
 
+
 * To Do List-Next Action List(다음행동 리스트)
+** TODO 방송통신대학 컴퓨터 공학과 원서접수
+*** 제출서류 확인, 준비 
+
+** TODO 현진 (킥오프일자 : 2018.11.22)
+*** WBS 일정에 맞게 수정
+*** 킥오프 회의록 정리
+*** 기준정보 기초데이터 정리 및 필요정보 확인
+*** 요구사항 정의서 초안 작성 
+
+** TODO 현진 리포트 사용방법 정리 및 리뷰
+*** 테스트 및 문서 정리 리뷰
+    1. jasperreport overview
+    2. install and setup
+    3. spring(전자정부프레임워크) 과 환경구성
+    4. sample reporting
+
+
 ** TODO 화면설계 작업자 화면
 *** 재고 이동, 불출 관련 화면 (이동, 자재불출)
 *** 재고현황을 볼 수 있도록 하거나 기존 화면 활용 할 수 있도록 설계 할것.
@@ -28,11 +49,12 @@
 *** 화면설계 우선 작성 하고 확정되면 프로그램 개발 진행
 
 ** TODO 현진 요구사항 리포트
-*** 오즈리포트, 아이리포트 상무님이 메일로 전달 
+*** 오즈리포트, 아이리포트 상무님이 메일로 전달
 *** 출하 - 거래명세서
 *** 발주 - 발주서
 **** 발주자가 바로 내는 발주
 **** 시스템에서 넘어오는 발주
+
 ** TODO 현진소재 보고서 툴 사용방법 정리
 
 * Waiting List(대기중 리스트)
@@ -41,7 +63,6 @@
    - bom-popup
    - bom-rgsn-popup
    - bom
-
 
 * Done List(완료 리스트)
 ** DONE Bom 품목정보 목록 팝업 수정 
@@ -75,7 +96,6 @@
 ** DONE 금일 운남 미팅 2018 12 06 
    CLOSED: [2018-12-07  15:54]
    - State "DONE"       from "HOLD"       [2018-12-07  15:54]
-
 
 ** DONE 작업지시 관련 - 작업자 화면
    CLOSED: [2018-12-07 15:57]
