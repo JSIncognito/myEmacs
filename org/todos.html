@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-12-11 화 22:37 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgce235fe">1. Inbox(수집함)</a>
+<ul>
+<li><a href="#org5df2cb3">1.1. 작업자화면 실적등록 추가 설계기반 화면 개발</a>
+<ul>
+<li><a href="#org73768a1">1.1.1. 작업지시 리스트 화면 -&gt; 공정이동 / 상품 재고 등록</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgf2f5694">2. Project List</a>
+<ul>
+<li><a href="#org163ddd7">2.1. <span class="todo TODO">TODO</span> 현진 신규소스생성, 기준정보 자료 분석, 기준정보 자료 넣기</a>
+<ul>
+<li><a href="#orgc0d834b">2.1.1. 현진 신규소스 Github 업로드</a></li>
+<li><a href="#org0d15e9f">2.1.2. 미팅때 요청한 기준정보 자료 분석</a></li>
+<li><a href="#org98e8661">2.1.3. DB Table 데이터 넣기</a></li>
+</ul>
+</li>
+<li><a href="#org86d0c98">2.2. 현진 기준정보 기초 데이터 정리</a>
+<ul>
+<li><a href="#orgf844652">2.2.1. 부력, 현진, 루미</a></li>
+<li><a href="#org7b6bac6">2.2.2. 거래처 현황</a></li>
+<li><a href="#org9a988ff">2.2.3. 제품목록</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgef69c3f">3. Some time ago Maybe List(언제가/어쩌면 리스트)</a></li>
+<li><a href="#orgfb0e7c1">4. Later Verify Lisy (추후 확인)</a>
+<ul>
+<li><a href="#org5523b09">4.1. 배포 절차 익히기</a>
+<ul>
+<li><a href="#orgd5e7d32">4.1.1. War 파일 배포</a></li>
+<li><a href="#orgdcd6208">4.1.2. FTP 서버 셋팅 등등..</a></li>
+</ul>
+</li>
+<li><a href="#orgd390912">4.2. 작업자 화면 Style CSS 파일로 변경</a></li>
+<li><a href="#org694d986">4.3. 도커 Docker 참조 자료 확인</a></li>
+<li><a href="#org9c28beb">4.4. <span class="todo TODO">TODO</span> View 하나로 합쳐져 있는 jsp 나누기</a>
+<ul>
+<li><a href="#org1921553">4.4.1. bom -&gt; 등록 -&gt; 품목정보 팝업 이후 bom 에서 등록을 누를 경우 서버 에러 발생</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgef1f454">5. To Do List-Next Action List(다음행동 리스트)</a>
+<ul>
+<li><a href="#org7b34155">5.1. <span class="todo TODO">TODO</span> 방송통신대학 컴퓨터 공학과 원서접수&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_home">@home</span></span></a>
+<ul>
+<li><a href="#org306b048">5.1.1. 제출서류 확인, 준비</a></li>
+</ul>
+</li>
+<li><a href="#orga44ce8a">5.2. <span class="todo TODO">TODO</span> 현진 (킥오프일자 : 2018.11.22)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span></span></a>
+<ul>
+<li><a href="#org4848b42">5.2.1. <del>DONE WBS 일정에 맞게 수정</del>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span></span></a></li>
+<li><a href="#org48a913f">5.2.2. <del>DONE 킥오프 회의록 정리</del>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span></span></a></li>
+<li><a href="#orgc3110a8">5.2.3. 기준정보 기초데이터 정리 및 필요정보 확인</a></li>
+<li><a href="#org8a191f7">5.2.4. <span class="done DONE">DONE</span> 요구사항 정의서 초안 작성&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span></span></a></li>
+</ul>
+</li>
+<li><a href="#orgb79c42e">5.3. <span class="todo TODO">TODO</span> 현진 리포트 사용방법 정리 및 리뷰</a>
+<ul>
+<li><a href="#org0e537e6">5.3.1. 테스트 및 문서 정리 리뷰</a></li>
+</ul>
+</li>
+<li><a href="#org0db792b">5.4. <span class="todo TODO">TODO</span> 화면설계 작업자 화면</a>
+<ul>
+<li><a href="#org23b17a4">5.4.1. 재고 이동, 불출 관련 화면 (이동, 자재불출)</a></li>
+<li><a href="#orge99e747">5.4.2. 재고현황을 볼 수 있도록 하거나 기존 화면 활용 할 수 있도록 설계 할것.</a></li>
+<li><a href="#org5f8ad9f">5.4.3. 리스트에서 선택 -&gt; 이동 버튼 (선택 사항만 있는 화면)</a></li>
+<li><a href="#org7944e2e">5.4.4. 실적등록 2 참고</a></li>
+<li><a href="#org90929c5">5.4.5. 화면설계 우선 작성 하고 확정되면 프로그램 개발 진행</a></li>
+</ul>
+</li>
+<li><a href="#orgfafc142">5.5. <span class="done DONE">DONE</span> 현진 요구사항 리포트</a>
+<ul>
+<li><a href="#org7f079b5">5.5.1. 오즈리포트, 아이리포트 상무님이 메일로 전달</a></li>
+<li><a href="#org8ad625f">5.5.2. 출하 - 거래명세서</a></li>
+<li><a href="#org397cb4c">5.5.3. 발주 - 발주서</a></li>
+</ul>
+</li>
+<li><a href="#orgce99230">5.6. <span class="todo TODO">TODO</span> 현진소재 보고서 툴 사용방법 정리</a></li>
+</ul>
+</li>
+<li><a href="#orgf51a520">6. Waiting List(대기중 리스트)</a>
+<ul>
+<li><a href="#org58f1b34">6.1. BOM view 나누기</a></li>
+</ul>
+</li>
+<li><a href="#org37d971d">7. Done List(완료 리스트)</a>
+<ul>
+<li><a href="#orgce5e653">7.1. <span class="done DONE">DONE</span> Bom 품목정보 목록 팝업 수정</a></li>
+<li><a href="#orge8d5c5b">7.2. <span class="done DONE">DONE</span> 작업자 화면</a></li>
+<li><a href="#orgc86c79c">7.3. <span class="done DONE">DONE</span> 세종소재 실적등록 양품 / OVER / LOSS 변경</a>
+<ul>
+<li><a href="#org259075f">7.3.1. 실적구분 코드 LOSS 추가</a></li>
+</ul>
+</li>
+<li><a href="#org6a787a8">7.4. <span class="done DONE">DONE</span> 사용자 화면 소수점 입력 확인</a></li>
+<li><a href="#org697ca55">7.5. <span class="done DONE">DONE</span> 작업 지시 수정.</a>
+<ul>
+<li><a href="#orgbc53f90">7.5.1. 공통으로 적용해야할 수정 사항 적용</a></li>
+</ul>
+</li>
+<li><a href="#org2c588db">7.6. <span class="done DONE">DONE</span> 현진소재(주) 회의내용 정리</a>
+<ul>
+<li><a href="#orgb4e0d32">7.6.1. GitLab 정리</a></li>
+</ul>
+</li>
+<li><a href="#org59bd2d8">7.7. <span class="done DONE">DONE</span> 금일 운남 미팅 2018 12 06</a></li>
+<li><a href="#orgd7d6a08">7.8. <span class="done DONE">DONE</span> 작업지시 관련 - 작업자 화면</a>
+<ul>
+<li><a href="#org52d63f5">7.8.1. 작업자 화면에서 작업지시 목록 금일것만 조회 되는지? (금일 이외의 것도 실적등록 가능하게 수정)</a></li>
+</ul>
+</li>
+<li><a href="#org556b192">7.9. <span class="done DONE">DONE</span> 세종소재 수정사항</a>
+<ul>
+<li><a href="#orgb617161">7.9.1. <span class="done DONE">DONE</span> 작업자 화면 실적등록 공정 재고 이동, 생상품 입고 등록 추가 화면설계</a></li>
+<li><a href="#orgb36322b">7.9.2. 작업자 화면 - 작업지시 검색 조건 금일 일자가 아닌 전체 조회 되도록 수정 해야함</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgce235fe" class="outline-2">
+<h2 id="orgce235fe"><span class="section-number-2">1</span> Inbox(수집함)</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org5df2cb3" class="outline-3">
+<h3 id="org5df2cb3"><span class="section-number-3">1.1</span> 작업자화면 실적등록 추가 설계기반 화면 개발</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org73768a1" class="outline-4">
+<h4 id="org73768a1"><span class="section-number-4">1.1.1</span> 작업지시 리스트 화면 -&gt; 공정이동 / 상품 재고 등록</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf2f5694" class="outline-2">
+<h2 id="orgf2f5694"><span class="section-number-2">2</span> Project List</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org163ddd7" class="outline-3">
+<h3 id="org163ddd7"><span class="section-number-3">2.1</span> <span class="todo TODO">TODO</span> 현진 신규소스생성, 기준정보 자료 분석, 기준정보 자료 넣기</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgc0d834b" class="outline-4">
+<h4 id="orgc0d834b"><span class="section-number-4">2.1.1</span> 현진 신규소스 Github 업로드</h4>
+</div>
+<div id="outline-container-org0d15e9f" class="outline-4">
+<h4 id="org0d15e9f"><span class="section-number-4">2.1.2</span> 미팅때 요청한 기준정보 자료 분석</h4>
+</div>
+<div id="outline-container-org98e8661" class="outline-4">
+<h4 id="org98e8661"><span class="section-number-4">2.1.3</span> DB Table 데이터 넣기</h4>
+</div>
+</div>
+
+<div id="outline-container-org86d0c98" class="outline-3">
+<h3 id="org86d0c98"><span class="section-number-3">2.2</span> 현진 기준정보 기초 데이터 정리</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgf844652" class="outline-4">
+<h4 id="orgf844652"><span class="section-number-4">2.2.1</span> 부력, 현진, 루미</h4>
+</div>
+<div id="outline-container-org7b6bac6" class="outline-4">
+<h4 id="org7b6bac6"><span class="section-number-4">2.2.2</span> 거래처 현황</h4>
+</div>
+<div id="outline-container-org9a988ff" class="outline-4">
+<h4 id="org9a988ff"><span class="section-number-4">2.2.3</span> 제품목록</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgef69c3f" class="outline-2">
+<h2 id="orgef69c3f"><span class="section-number-2">3</span> Some time ago Maybe List(언제가/어쩌면 리스트)</h2>
+</div>
+
+<div id="outline-container-orgfb0e7c1" class="outline-2">
+<h2 id="orgfb0e7c1"><span class="section-number-2">4</span> Later Verify Lisy (추후 확인)</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org5523b09" class="outline-3">
+<h3 id="org5523b09"><span class="section-number-3">4.1</span> 배포 절차 익히기</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgd5e7d32" class="outline-4">
+<h4 id="orgd5e7d32"><span class="section-number-4">4.1.1</span> War 파일 배포</h4>
+</div>
+<div id="outline-container-orgdcd6208" class="outline-4">
+<h4 id="orgdcd6208"><span class="section-number-4">4.1.2</span> FTP 서버 셋팅 등등..</h4>
+</div>
+</div>
+<div id="outline-container-orgd390912" class="outline-3">
+<h3 id="orgd390912"><span class="section-number-3">4.2</span> 작업자 화면 Style CSS 파일로 변경</h3>
+</div>
+<div id="outline-container-org694d986" class="outline-3">
+<h3 id="org694d986"><span class="section-number-3">4.3</span> 도커 Docker 참조 자료 확인</h3>
+</div>
+
+<div id="outline-container-org9c28beb" class="outline-3">
+<h3 id="org9c28beb"><span class="section-number-3">4.4</span> <span class="todo TODO">TODO</span> View 하나로 합쳐져 있는 jsp 나누기</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org1921553" class="outline-4">
+<h4 id="org1921553"><span class="section-number-4">4.4.1</span> bom -&gt; 등록 -&gt; 품목정보 팝업 이후 bom 에서 등록을 누를 경우 서버 에러 발생</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<p>
+msg: org.springframework.http.converter.HttpMessageNotReadableException: Required request body content is missing: method 'getBom' parameter 0
+</p>
+<ul class="org-ul">
+<li>Spring JSON 행방 불명&#x2026; 다른 형태로 ajax 사용해서 해볼것&#x2026;</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgef1f454" class="outline-2">
+<h2 id="orgef1f454"><span class="section-number-2">5</span> To Do List-Next Action List(다음행동 리스트)</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org7b34155" class="outline-3">
+<h3 id="org7b34155"><span class="section-number-3">5.1</span> <span class="todo TODO">TODO</span> 방송통신대학 컴퓨터 공학과 원서접수&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_home">@home</span></span></h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org306b048" class="outline-4">
+<h4 id="org306b048"><span class="section-number-4">5.1.1</span> 제출서류 확인, 준비</h4>
+</div>
+</div>
+
+<div id="outline-container-orga44ce8a" class="outline-3">
+<h3 id="orga44ce8a"><span class="section-number-3">5.2</span> <span class="todo TODO">TODO</span> 현진 (킥오프일자 : 2018.11.22)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span></span></h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org4848b42" class="outline-4">
+<h4 id="org4848b42"><span class="section-number-4">5.2.1</span> <del>DONE WBS 일정에 맞게 수정</del>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span></span></h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-11 화 11:23]</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org48a913f" class="outline-4">
+<h4 id="org48a913f"><span class="section-number-4">5.2.2</span> <del>DONE 킥오프 회의록 정리</del>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span></span></h4>
+<div class="outline-text-4" id="text-5-2-2">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-11 화 11:23]</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc3110a8" class="outline-4">
+<h4 id="orgc3110a8"><span class="section-number-4">5.2.3</span> 기준정보 기초데이터 정리 및 필요정보 확인</h4>
+</div>
+<div id="outline-container-org8a191f7" class="outline-4">
+<h4 id="org8a191f7"><span class="section-number-4">5.2.4</span> <span class="done DONE">DONE</span> 요구사항 정의서 초안 작성&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span></span></h4>
+<div class="outline-text-4" id="text-5-2-4">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-11 화 11:24]</span></span></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb79c42e" class="outline-3">
+<h3 id="orgb79c42e"><span class="section-number-3">5.3</span> <span class="todo TODO">TODO</span> 현진 리포트 사용방법 정리 및 리뷰</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org0e537e6" class="outline-4">
+<h4 id="org0e537e6"><span class="section-number-4">5.3.1</span> 테스트 및 문서 정리 리뷰</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ul class="org-ul">
+<li>jasperreport overview</li>
+<li>install and setup</li>
+<li>spring(전자정부프레임워크) 과 환경구성</li>
+<li>sample reporting</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0db792b" class="outline-3">
+<h3 id="org0db792b"><span class="section-number-3">5.4</span> <span class="todo TODO">TODO</span> 화면설계 작업자 화면</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-org23b17a4" class="outline-4">
+<h4 id="org23b17a4"><span class="section-number-4">5.4.1</span> 재고 이동, 불출 관련 화면 (이동, 자재불출)</h4>
+</div>
+<div id="outline-container-orge99e747" class="outline-4">
+<h4 id="orge99e747"><span class="section-number-4">5.4.2</span> 재고현황을 볼 수 있도록 하거나 기존 화면 활용 할 수 있도록 설계 할것.</h4>
+</div>
+<div id="outline-container-org5f8ad9f" class="outline-4">
+<h4 id="org5f8ad9f"><span class="section-number-4">5.4.3</span> 리스트에서 선택 -&gt; 이동 버튼 (선택 사항만 있는 화면)</h4>
+</div>
+<div id="outline-container-org7944e2e" class="outline-4">
+<h4 id="org7944e2e"><span class="section-number-4">5.4.4</span> 실적등록 2 참고</h4>
+</div>
+<div id="outline-container-org90929c5" class="outline-4">
+<h4 id="org90929c5"><span class="section-number-4">5.4.5</span> 화면설계 우선 작성 하고 확정되면 프로그램 개발 진행</h4>
+</div>
+</div>
+
+<div id="outline-container-orgfafc142" class="outline-3">
+<h3 id="orgfafc142"><span class="section-number-3">5.5</span> <span class="done DONE">DONE</span> 현진 요구사항 리포트</h3>
+<div class="outline-text-3" id="text-5-5">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-11 화 11:27]</span></span></li>
+</ul>
+</div>
+<div id="outline-container-org7f079b5" class="outline-4">
+<h4 id="org7f079b5"><span class="section-number-4">5.5.1</span> 오즈리포트, 아이리포트 상무님이 메일로 전달</h4>
+</div>
+<div id="outline-container-org8ad625f" class="outline-4">
+<h4 id="org8ad625f"><span class="section-number-4">5.5.2</span> 출하 - 거래명세서</h4>
+</div>
+<div id="outline-container-org397cb4c" class="outline-4">
+<h4 id="org397cb4c"><span class="section-number-4">5.5.3</span> 발주 - 발주서</h4>
+<div class="outline-text-4" id="text-5-5-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgd2c9095"></a>발주자가 바로 내는 발주<br /></li>
+<li><a id="org5f02b91"></a>시스템에서 넘어오는 발주<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgce99230" class="outline-3">
+<h3 id="orgce99230"><span class="section-number-3">5.6</span> <span class="todo TODO">TODO</span> 현진소재 보고서 툴 사용방법 정리</h3>
+</div>
+</div>
+
+<div id="outline-container-orgf51a520" class="outline-2">
+<h2 id="orgf51a520"><span class="section-number-2">6</span> Waiting List(대기중 리스트)</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org58f1b34" class="outline-3">
+<h3 id="org58f1b34"><span class="section-number-3">6.1</span> BOM view 나누기</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>bom-inq-popup</li>
+<li>bom-popup</li>
+<li>bom-rgsn-popup</li>
+<li>bom</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org37d971d" class="outline-2">
+<h2 id="org37d971d"><span class="section-number-2">7</span> Done List(완료 리스트)</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgce5e653" class="outline-3">
+<h3 id="orgce5e653"><span class="section-number-3">7.1</span> <span class="done DONE">DONE</span> Bom 품목정보 목록 팝업 수정</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+</div>
+<div id="outline-container-orge8d5c5b" class="outline-3">
+<h3 id="orge8d5c5b"><span class="section-number-3">7.2</span> <span class="done DONE">DONE</span> 작업자 화면</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+</div>
+<div id="outline-container-orgc86c79c" class="outline-3">
+<h3 id="orgc86c79c"><span class="section-number-3">7.3</span> <span class="done DONE">DONE</span> 세종소재 실적등록 양품 / OVER / LOSS 변경</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>State "DONE"</li>
+</ul>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2018-12-03 월&gt;</span></span>
+DEADLINE: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-12-03 월&gt;</span></span>
+</p>
+</div>
+
+<div id="outline-container-org259075f" class="outline-4">
+<h4 id="org259075f"><span class="section-number-4">7.3.1</span> 실적구분 코드 LOSS 추가</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<ul class="org-ul">
+<li>'10' 양품, '20' OVER(불량), '30' LOSS</li>
+<li>LOSS 버튼 추가</li>
+<li>작업지시 화면 LOSS 부분 추가할것.</li>
+<li>쿼리수정 적용.</li>
+<li>테스트 진행</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6a787a8" class="outline-3">
+<h3 id="org6a787a8"><span class="section-number-3">7.4</span> <span class="done DONE">DONE</span> 사용자 화면 소수점 입력 확인</h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>State "DONE"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-04 화 09:32]</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org697ca55" class="outline-3">
+<h3 id="org697ca55"><span class="section-number-3">7.5</span> <span class="done DONE">DONE</span> 작업 지시 수정.</h3>
+<div class="outline-text-3" id="text-7-5">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-04 화 14:41]</span></span></li>
+</ul>
+</div>
+<div id="outline-container-orgbc53f90" class="outline-4">
+<h4 id="orgbc53f90"><span class="section-number-4">7.5.1</span> 공통으로 적용해야할 수정 사항 적용</h4>
+<div class="outline-text-4" id="text-7-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="org0541a90"></a>실적등록 소수점 입력 반영되도록 수정<br /></li>
+<li><a id="org6aaaee3"></a>작업지시 &gt; 실적등록 규격, 형태 항목 표기 수정<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org2c588db" class="outline-3">
+<h3 id="org2c588db"><span class="section-number-3">7.6</span> <span class="done DONE">DONE</span> 현진소재(주) 회의내용 정리</h3>
+<div class="outline-text-3" id="text-7-6">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-07 금 15:53]</span></span></li>
+</ul>
+</div>
+<div id="outline-container-orgb4e0d32" class="outline-4">
+<h4 id="orgb4e0d32"><span class="section-number-4">7.6.1</span> GitLab 정리</h4>
+</div>
+</div>
+<div id="outline-container-org59bd2d8" class="outline-3">
+<h3 id="org59bd2d8"><span class="section-number-3">7.7</span> <span class="done DONE">DONE</span> 금일 운남 미팅 2018 12 06</h3>
+<div class="outline-text-3" id="text-7-7">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-07 금 15:54]</span></span></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd7d6a08" class="outline-3">
+<h3 id="orgd7d6a08"><span class="section-number-3">7.8</span> <span class="done DONE">DONE</span> 작업지시 관련 - 작업자 화면</h3>
+<div class="outline-text-3" id="text-7-8">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-07 금 15:57]</span></span></li>
+</ul>
+</div>
+<div id="outline-container-org52d63f5" class="outline-4">
+<h4 id="org52d63f5"><span class="section-number-4">7.8.1</span> 작업자 화면에서 작업지시 목록 금일것만 조회 되는지? (금일 이외의 것도 실적등록 가능하게 수정)</h4>
+<div class="outline-text-4" id="text-7-8-1">
+</div>
+<ol class="org-ol">
+<li><a id="org6a639ef"></a>이전 화면, 새로고침 작업 종료시 동일하게 조건 없도록 수정해야함.<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org556b192" class="outline-3">
+<h3 id="org556b192"><span class="section-number-3">7.9</span> <span class="done DONE">DONE</span> 세종소재 수정사항</h3>
+<div class="outline-text-3" id="text-7-9">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-07 금 15:58]</span></span></li>
+</ul>
+</div>
+<div id="outline-container-orgb617161" class="outline-4">
+<h4 id="orgb617161"><span class="section-number-4">7.9.1</span> <span class="done DONE">DONE</span> 작업자 화면 실적등록 공정 재고 이동, 생상품 입고 등록 추가 화면설계</h4>
+<div class="outline-text-4" id="text-7-9-1">
+<ul class="org-ul">
+<li>State "DONE"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2018-12-05 수 18:25]</span></span></li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="orgf35d120"></a>작업종료시 다음공정 (자재불출없이) 가동중으로 변경<br /></li>
+<li><a id="org975156f"></a>작업실적등록2 참고(미구현)<br /></li>
+<li><a id="orgeac1adb"></a>재고이동이 간소화되서 적용되어야함<br /></li>
+<li><a id="org88720c2"></a>관리자화면에서 공정 재고 이동, 생상품 입고 등록 참고<br /></li>
+<li><a id="org883668c"></a>화면설계서 작업자화면 (실적등록 수정) ppt 확인<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgb36322b" class="outline-4">
+<h4 id="orgb36322b"><span class="section-number-4">7.9.2</span> 작업자 화면 - 작업지시 검색 조건 금일 일자가 아닌 전체 조회 되도록 수정 해야함</h4>
+<div class="outline-text-4" id="text-7-9-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgcee604f"></a>새로고침, 작업종료, 이전화면 선택시 검색 조건 변경해야함.<br /></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-12-11 화 22:37</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
