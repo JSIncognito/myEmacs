@@ -352,7 +352,7 @@
 </pre>
 
 
-* TODO 이맥스 정리
+* 이맥스 정리
 ** 이맥스 설치
 *** emacs config file
     - init.el
